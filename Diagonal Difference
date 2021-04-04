@@ -1,0 +1,60 @@
+
+#include<bits/stdc++.h>
+using namespace std;
+
+int main() {
+	// your code goes here
+   int i,j;
+   int countl=0;
+   int count2=0;
+	int arr[5][5] ;
+	cout<<"Enter the value of array:";
+		for( i=0; i<5; i++)
+    	{
+	    for( j=0;j<5;j++)
+	       {
+	           cin>>arr[i][j];
+	       }
+	       
+    	}
+    	cout<<"Array"<<endl;
+   	for( i=0; i<5; i++)
+    	{
+	    for( j=0; j<5;j++)
+	       {
+	           cout<<arr[i][j]<<" ";
+	           
+	       }
+	       cout<<endl;
+	       
+    	}
+    
+        for( i=0; i<5; i++)
+    	{
+	    for( j=0;j<5;j++)
+	       {
+	          if(i==j)
+	          countl+=arr[i][j];
+	       }
+	       
+    	}
+    	cout<<countl<<endl;
+    	
+    	for( i=0; i<5; i++)
+    	{
+	    for( j=0;j<5;j++)
+	       {
+	          if(i+j==4)
+	          count2+=arr[i][j];
+	       }
+    	}
+    	cout<<count2;
+      
+      int d=0;
+    	if(count2>countl)
+    	 d=count2 - countl;
+    	 else
+    	 d=countl - count2;
+    	 
+    	 cout<<"difference:"<<d<<endl;
+}
