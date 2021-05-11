@@ -15,7 +15,14 @@ bool solve(vector<int>& nums, vector<int>& target) {
     else if(x!=y)
    { return false;}
    return true;
-
-
-
 }
+
+    bool solve(vector<int>& a, vector<int>& b) {
+    sort(a.begin(), a.end());
+    sort(b.begin(), b.end());
+    if( a == b ) return true;
+    else return false;
+}
+
+
+
